@@ -4,7 +4,7 @@
 
 How many full trajectories are needed to learn an autoregressive generator whose parameters are shared across time? For unrestricted $d$-dimensional logistic generators, the best known chain-of-thought bound is roughly $d^2\log M/\epsilon$ trajectories at horizon $M$. Whether the natural $d$-dimensional rate is possible was left open. We answer this question affirmatively, up to logarithmic factors. A proper information-theoretic learner achieves trajectory Hellinger risk and final-token squared error at most $\epsilon$ from 
 
-$$O\\\\\\!\left(\frac{d\log(Md)\log(1/\epsilon)+\log(1/\delta)}{\epsilon}\right)$$
+$$O\\!\left(\frac{d\log(Md)\log(1/\epsilon)+\log(1/\delta)}{\epsilon}\right)$$
 
  full trajectories, with no norm, margin, mixing, or prompt-distribution assumption. A matching $\Omega((d+\log(1/\delta))/\epsilon)$ lower bound holds already at one step. The proof identifies an observed-path dimension that is much smaller than the complexity of the marginalized final-token map. After exponentiating the logistic weights, the likelihood of one revealed path is a rational function of $d$ positive parameters with degree at most $Md$. A sign-pattern argument gives VC-subgraph dimension $O(d\log(Md))$. A conditional rho-estimator then converts this dimension into a proper Hellinger oracle inequality while canceling the unknown prompt marginal. The argument extends to misspecification, every bounded trajectory statistic, unrestricted multiclass softmax generators, and model selection over unknown memory orders. It also yields a general theorem for shared-parameter autoregressive models with rational local probabilities.
 
